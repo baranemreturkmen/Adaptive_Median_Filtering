@@ -1,5 +1,5 @@
 function [f,mask_size] = adaptive_median( g_noisy,Smax )
-%%Upper lines in English
+%Upper lines in English
 %Lower lines in Turkish 
 
 %Adaptive median filter created as Matlab function.
