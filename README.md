@@ -1,5 +1,6 @@
 # Adaptive_Median_Filtering
 English:
+
 In this work, an adaptive median filter was created by applying the adaptive filtering algorithm on the median filter. It is difficult to determine the filter size for the correct image and noise ratio when filtering in the spatial domain. This study has prevented this. If the user enters a filter size smaller than the required filter size, the filtering process will be performed even if the filtering process is insufficient. At the end of the filtering process user will be warned about the insufficient filter size. If the user enters a larger value than the required filter size, the correct filtering process will be performed and at the end of the filtering process, the correct filter size will be given. The code is set to apply filter for the correct size and finish the filtering process even if a large filter value is entered, but still the correct filter size will be given to users.
 
 Turkish:
