@@ -36,7 +36,7 @@ logical_array = false(size(g_noisy));
 
 for k=3:2:Smax
     zmin = ordfilt2(g_noisy, 1 , ones(k,k),'symmetric');
-    %Please convert it by translator...
+    %Please translate it by translator...
     
     %g_noisy'nin ilgili elemanini degeri maskenin kapsadigi komsu elemanlar 
     %içerisinde  en küçük degerde olanidir(order=1 oldugu için). Eger order
@@ -49,7 +49,7 @@ for k=3:2:Smax
     %yakindir. ordfilt2 komutu hakkinda daha fazla bilgi icin 
     %http://matlab.izmiran.ru/help/toolbox/images/ordfilt2.html 'e bakin.
     zmax = ordfilt2(g_noisy,k*k, ones(k,k),'symmetric');
-    %Please convert it by translator...
+    %Please translate it by translator...
     
     %Maks.filtre maskenin kapsadigi elemanlar içindeki en büyük degerli
     %elemani yeni elemanla degistirmek olduguna göre, yeni filtrede
@@ -61,7 +61,7 @@ for k=3:2:Smax
     zmed = medfilt2(g_noisy,[k k],'symmetric');
 
     level_b = (zmed > zmin) & (zmax > zmed) & ~logical_array;
-    %Please convert it by translator...
+    %Please translate it by translator...
     
     %Eger bu sart saglanirsa seviye b'ye gurultulu goruntunun boyutunda
     %lojik 1'lerden olusan arraylar ataniyor. Saglanmazsa lojik 0'lardan
@@ -74,7 +74,7 @@ for k=3:2:Smax
     %etmektir. Bu kontrol goruntu icerisinde varligini surduren tum pikseller 
     %icin yapilir .Yap?lan filtrelemenin adaptif olmasinin sebebi budur.
     zb = (g_noisy > zmin) & (zmax > g_noisy);
-    %Please convert it by translator...
+    %Please translate it by translator...
     
     %Eger bu sart saglaniyorsa lojik 1'den olusan array asagidaki Zxy_output'a 
     %saglanmiyorsa Zmed_output'a atanacaktir. Tabiki yukarida bahsedildigi gibi 
@@ -94,7 +94,7 @@ for k=3:2:Smax
 
     f(Zxy_output) = g_noisy(Zxy_output);
     f(Zmed_output) = zmed(Zmed_output);
-    %Please convert it by translator...
+    %Please translate it by translator...
     
     %Eger Zxy_output lojik 1'lerden olusuyorsa g_noisy tum degerlerini aynen
     %koruyup f'e atanacak . Ama eger Zmed_output lojik 1'lerden olusuyorsa 

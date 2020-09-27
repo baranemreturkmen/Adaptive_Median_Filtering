@@ -85,4 +85,22 @@ Smax_value_2
 %Show necessary mask size for adaptive median filtering
 %Adaptif medyyan filtreleme islemi icin gerekli maske boyutu gosteriliyor
 
-%Note that blah blah --ekle-- neden grayscale image'a eklendi gurultu.
+%Please translate it by translator...
+
+%Gurultu grayscale goruntu eklendi cunku imnoise komutu tuz ve biber
+%gurultusunu resime 0.2 oraninda esit sekilde dagitti. Eger rgb 3 kanalli
+%goruntuye gurultu uygulayip daha sonra gurultulu goruntuyu griye cevirseydik
+%ve filtreyi calistirsaydik filtre gurultuyu temizle noktasinda basarili
+%olamayacakti. Cunku rgb 3 kanalli goruntu, griye donusturulurken her bir
+%piksel icin degeri icin red green blue olmak uzere degerlerin ortalamasi
+%alinir ve 3'e bolunur. Bu durumda goruntu uzerinde var olan tuz
+%gurultulerininde ortalamasi alinacak ve var olan gurultulu pikseller
+%ortalamalari alinip 3'e bolundugu icin gurultuden sayilmayacakti. Bu
+%sorunu cozmek icin baska bir yontem gelistirilmelidir.
+
+%Note that we apply simetric filters so filter size always must be odd
+%number . 3x3 7x7 etc.
+
+%Uygulanan filtreler simetrik olmasi gerektiginden filtre boyutlari tek
+%sayi olmalidir. 3x3 7x7 vs.
+
