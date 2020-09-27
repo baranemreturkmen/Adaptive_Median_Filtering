@@ -45,7 +45,7 @@ for k=3:2:Smax
     %ile filtreme isleminde kullandigim maskenin boyutunu belirliyorum.
     %minimum filtreleme gurultulu goruntude ki tum piksellerin
     %degerini olabildigince dusurup 0'a yakinlastirmaya calisir yani siyaha
-    %karabiber gurultusune. Tum pikseller siyaht?r yada siyaha cok
+    %karabiber gurultusune. Tum pikseller siyahtir yada siyaha cok
     %yakindir. ordfilt2 komutu hakkinda daha fazla bilgi icin 
     %http://matlab.izmiran.ru/help/toolbox/images/ordfilt2.html 'e bakin.
     zmax = ordfilt2(g_noisy,k*k, ones(k,k),'symmetric');
